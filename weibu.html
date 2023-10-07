@@ -1,164 +1,225 @@
-<div class="end">
-        <div class="last">
-            <div class="box1">
-                <span class="a1"><a href="#">首页</a></span>
-                <span class="a2">
-                    <input type="search" placeholder="搜索huawei.com" style="font-size: 16px;">
-                </span>
- 
-            </div>
-            <div class="box2">
-                <div class="y1">
-                    <h4>
-                        关于华为
-                    </h4>
-                    <ul>
-                        <li>
-                            <a href="#">公司简介</a>
-                        </li>
-                        <li>
-                            <a href="#">可持续发展</a>
-                        </li>
-                        <li>
-                            <a href="#">信任中心</a>
-                        </li>
-                        <li>
-                            <a href="#">管理层信息</a>
-                        </li>
-                        <li>
-                            <a href="#">招纳贤士</a>
-                        </li>
-                        <li>
-                            <a href="#">供应商</a>
-                        </li>
-                        <li>
-                            <a href="#">查看更多 ></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="y2">
-                    <h4>
-                        新闻与活动
-                    </h4>
-                    <ul>
-                        <li>
-                            <a href="#">新闻</a>
-                        </li>
-                        <li>
-                            <a href="#">展会活动</a>
-                        </li>
-                        <li>
-                            <a href="#">多媒体</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="y3">
-                    <h4>
-                        发现华为
-                    </h4>
-                    <ul>
-                        <li>
-                            <a href="#">华为技术专栏</a>
-                        </li>
-                        <li>
-                            <a href="#">跃升数字生产力</a>
-                        </li>
-                        <li>
-                            <a href="#">智能世界2030报告</a>
-                        </li>
-                        <li>
-                            <a href="#">迈向智能世界白皮书</a>
-                        </li>
-                        <li>
-                            <a href="#">出版物</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="y4">
-                    <h4>
-                        我们的产品
-                    </h4>
-                    <ul>
-                        <li>
-                            <a href="#">个人及家庭产品</a>
-                        </li>
-                        <li>
-                            <a href="#">企业业务产品</a>
-                        </li>
-                        <li>
-                            <a href="#">运营商网络产品</a>
-                        </li>
-                        <li>
-                            <a href="#">华为云服务</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="y5">
-                    <h4>
-                        技术支持
-                    </h4>
-                    <ul>
-                        <li>
-                            <a href="#">消费者技术支持</a>
-                        </li>
-                        <li>
-                            <a href="#">华为云技术支持</a>
-                        </li>
-                        <li>
-                            <a href="#">企业技术支持</a>
-                        </li>
-                        <li>
-                            <a href="#">运营商技术支持</a>
-                        </li>
-                        <li>
-                            <a href="#">产品安全通告</a>
-                        </li>
-                    </ul>
-                </div>
- 
-            </div>
-            <div class="box3">
-                <div class="y6">
-                    <ul>
-                        <li><a href="#">华为商城</a></li>
-                        <li><a href="#">华为云</a></li>
-                        <li>
-                            <a href="#">华为智能光伏</a>
-                        </li>
-                        <li>
-                            <a href="#">产品定义社区</a>
-                        </li>
-                        <li>
-                            <a href="#">华为心声社区</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="y7">
-                    <a href="#"><img src="../imgs/新浪.png" alt=""></a>
-                    <a href="#"><img src="../imgs/in.png" alt=""></a>
-                    <a href="#"><img src="../imgs/微信.png" alt=""></a>
-                    <a href="#"><img src="../imgs/头条样式.png" alt=""></a>
-                    <a href="#"><img src="../imgs/知识.png" alt=""></a>
- 
-                </div>
-            </div>
-        </div>
-        <div class="lastest">
-            <div class="y10">
-                <ul>
-                    <li>@2023华为技术有限公司</li>
-                    <li><a href="#">粤A2-20044005号</a></li>
-                    <li><a href="#">粤公网安备4403072002388号</a></li>
-                    <li><em>|</em></li>
-                    <li><a href="#">联系我们</a></li>
-                    <li><a href="#">法律声明</a></li>
-                    <li><a href="#">隐私政策</a></li>
-                    <li><a href="#">除名查询</a></li>
- 
-                </ul>
-            </div>
- 
- 
-        </div>
- 
-    </div>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>loveHeart</title>
+    <link rel="shortcut icon" href="http://zhouql.vip/images/心.png" type="image/x-icon">
+    <style>
+        html,
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: #000;
+        }
+        canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="pinkboard"></canvas>
+    <script>
+        var settings = {
+            particles: {
+                length: 500, 
+                duration: 2, 
+                velocity: 100, 
+                effect: -0.75, 
+                size: 32, 
+            },
+        };
+        (function () { var b = 0; var c = ["ms", "moz", "webkit", "o"]; for (var a = 0; a < c.length && !window.requestAnimationFrame; ++a) { window.requestAnimationFrame = window[c[a] + "RequestAnimationFrame"]; window.cancelAnimationFrame = window[c[a] + "CancelAnimationFrame"] || window[c[a] + "CancelRequestAnimationFrame"] } if (!window.requestAnimationFrame) { window.requestAnimationFrame = function (h, e) { var d = new Date().getTime(); var f = Math.max(0, 16 - (d - b)); var g = window.setTimeout(function () { h(d + f) }, f); b = d + f; return g } } if (!window.cancelAnimationFrame) { window.cancelAnimationFrame = function (d) { clearTimeout(d) } } }());
+
+        var Point = (function () {
+            function Point(x, y) {
+                this.x = (typeof x !== 'undefined') ? x : 0;
+                this.y = (typeof y !== 'undefined') ? y : 0;
+            }
+            Point.prototype.clone = function () {
+                return new Point(this.x, this.y);
+            };
+            Point.prototype.length = function (length) {
+                if (typeof length == 'undefined')
+                    return Math.sqrt(this.x * this.x + this.y * this.y);
+                this.normalize();
+                this.x *= length;
+                this.y *= length;
+                return this;
+            };
+            Point.prototype.normalize = function () {
+                var length = this.length();
+                this.x /= length;
+                this.y /= length;
+                return this;
+            };
+            return Point;
+        })();
+        var Particle = (function () {
+            function Particle() {
+                this.position = new Point();
+                this.velocity = new Point();
+                this.acceleration = new Point();
+                this.age = 0;
+            }
+            Particle.prototype.initialize = function (x, y, dx, dy) {
+                this.position.x = x;
+                this.position.y = y;
+                this.velocity.x = dx;
+                this.velocity.y = dy;
+                this.acceleration.x = dx * settings.particles.effect;
+                this.acceleration.y = dy * settings.particles.effect;
+                this.age = 0;
+            };
+            Particle.prototype.update = function (deltaTime) {
+                this.position.x += this.velocity.x * deltaTime;
+                this.position.y += this.velocity.y * deltaTime;
+                this.velocity.x += this.acceleration.x * deltaTime;
+                this.velocity.y += this.acceleration.y * deltaTime;
+                this.age += deltaTime;
+            };
+            Particle.prototype.draw = function (context, image) {
+                function ease(t) {
+                    return (--t) * t * t + 1;
+                }
+                var size = image.width * ease(this.age / settings.particles.duration);
+                context.globalAlpha = 1 - this.age / settings.particles.duration;
+                context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2, size, size);
+            };
+            return Particle;
+        })();
+        var ParticlePool = (function () {
+            var particles,
+                firstActive = 0,
+                firstFree = 0,
+                duration = settings.particles.duration;
+            function ParticlePool(length) {
+                // create and populate particle pool
+                particles = new Array(length);
+                for (var i = 0; i < particles.length; i++)
+                    particles[i] = new Particle();
+            }
+            ParticlePool.prototype.add = function (x, y, dx, dy) {
+                particles[firstFree].initialize(x, y, dx, dy);
+                // handle circular queue
+                firstFree++;
+                if (firstFree == particles.length) firstFree = 0;
+                if (firstActive == firstFree) firstActive++;
+                if (firstActive == particles.length) firstActive = 0;
+            };
+            ParticlePool.prototype.update = function (deltaTime) {
+                var i;
+                // update active particles
+                if (firstActive < firstFree) {
+                    for (i = firstActive; i < firstFree; i++)
+                        particles[i].update(deltaTime);
+                }
+                if (firstFree < firstActive) {
+                    for (i = firstActive; i < particles.length; i++)
+                        particles[i].update(deltaTime);
+                    for (i = 0; i < firstFree; i++)
+                        particles[i].update(deltaTime);
+                }
+                // remove inactive particles
+                while (particles[firstActive].age >= duration && firstActive != firstFree) {
+                    firstActive++;
+                    if (firstActive == particles.length) firstActive = 0;
+                }
+            };
+            ParticlePool.prototype.draw = function (context, image) {
+                // draw active particles
+                if (firstActive < firstFree) {
+                    for (i = firstActive; i < firstFree; i++)
+                        particles[i].draw(context, image);
+                }
+                if (firstFree < firstActive) {
+                    for (i = firstActive; i < particles.length; i++)
+                        particles[i].draw(context, image);
+                    for (i = 0; i < firstFree; i++)
+                        particles[i].draw(context, image);
+                }
+            };
+            return ParticlePool;
+        })();
+        (function (canvas) {
+            var context = canvas.getContext('2d'),
+                particles = new ParticlePool(settings.particles.length),
+                particleRate = settings.particles.length / settings.particles.duration, // particles/sec
+                time;
+            // get point on heart with -PI <= t <= PI
+            function pointOnHeart(t) {
+                return new Point(
+                    160 * Math.pow(Math.sin(t), 3),
+                    130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
+                );
+            }
+            // creating the particle image using a dummy canvas
+            var image = (function () {
+                var canvas = document.createElement('canvas'),
+                    context = canvas.getContext('2d');
+                canvas.width = settings.particles.size;
+                canvas.height = settings.particles.size;
+                // helper function to create the path
+                function to(t) {
+                    var point = pointOnHeart(t);
+                    point.x = settings.particles.size / 2 + point.x * settings.particles.size / 350;
+                    point.y = settings.particles.size / 2 - point.y * settings.particles.size / 350;
+                    return point;
+                }
+                // create the path
+                context.beginPath();
+                var t = -Math.PI;
+                var point = to(t);
+                context.moveTo(point.x, point.y);
+                while (t < Math.PI) {
+                    t += 0.01; // baby steps!
+                    point = to(t);
+                    context.lineTo(point.x, point.y);
+                }
+                context.closePath();
+                // create the fill
+                context.fillStyle = '#ea80b0';
+                context.fill();
+                // create the image
+                var image = new Image();
+                image.src = canvas.toDataURL();
+                return image;
+            })();
+            // render that thing!
+            function render() {
+                // next animation frame
+                requestAnimationFrame(render);
+                // update time
+                var newTime = new Date().getTime() / 1000,
+                    deltaTime = newTime - (time || newTime);
+                time = newTime;
+                // clear canvas
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                // create new particles
+                var amount = particleRate * deltaTime;
+                for (var i = 0; i < amount; i++) {
+                    var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+                    var dir = pos.clone().length(settings.particles.velocity);
+                    particles.add(canvas.width / 2 + pos.x, canvas.height / 2 - pos.y, dir.x, -dir.y);
+                }
+                // update and draw particles
+                particles.update(deltaTime);
+                particles.draw(context, image);
+            }
+            // handle (re-)sizing of the canvas
+            function onResize() {
+                canvas.width = canvas.clientWidth;
+                canvas.height = canvas.clientHeight;
+            }
+            window.onresize = onResize;
+            // delay rendering bootstrap
+            setTimeout(function () {
+                onResize();
+                render();
+            }, 10);
+        })(document.getElementById('pinkboard'));
+        </script>
+</body>
+
+</html>
