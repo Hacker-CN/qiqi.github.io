@@ -4,23 +4,56 @@
   <style>
     body {
       background-color: black;
-      color: white;
-      font-size: 72px;
-      animation: blink 0.05s steps(2, start) infinite alternate;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .container {
+      position: relative;
+    }
+    
+    p {
+      color: #f00;
+      font-size: 720px;
+      animation: blink 0.01s steps(2, start) infinite alternate;
+    }
+    
+    .soldier {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url(兵王图片链接);
+      animation: rotate 1s linear infinite;
     }
     
     @keyframes blink {
       from {
-        visibility: visible;
+        color: #f00;
       }
       
       to {
-        visibility: hidden;
+        color: #0f0;
+      }
+    }
+    
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      
+      to {
+        transform: rotate(360deg);
       }
     }
   </style>
 </head>
 <body>
-  <p>兵王王玉闪亮登场</p>
+  <div class="container">
+    <p>兵王王玉闪亮登场</p>
+    <div class="soldier"></div>
+    <div class="soldier" style="top: 100px; left: 150px;"></div>
+    <!-- 添加更多的兵王元素，设置不同的位置 -->
+  </div>
 </body>
 </html>
