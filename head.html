@@ -9,51 +9,44 @@
       align-items: center;
     }
     
-    .container {
-      position: relative;
-    }
-    
     p {
-      color: #f00;
+      color: white;
       font-size: 72px;
-      animation: blink 0.01s steps(2, start) infinite alternate;
+      position: relative;
+      text-align: center;
     }
     
-    .soldier {
+    p::after {
+      content: "";
       position: absolute;
-      width: 50px;
-      height: 50px;
-      background-image: url(兵王图片链接);
-      animation: rotate 1s linear infinite;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8);
+      animation: glow 2s linear infinite;
     }
     
-    @keyframes blink {
-      from {
-        color: #f00;
+    @keyframes glow {
+      0% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
       }
       
-      to {
-        color: #0f0;
-      }
-    }
-    
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
+      50% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
       }
       
-      to {
-        transform: rotate(360deg);
+      100% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <p>兵王王玉闪亮登场</p>
-    <div class="soldier"></div>
-    <div class="soldier" style="top: 100px; left: 150px;"></div>
-    <!-- 添加更多的兵王元素，设置不同的位置 -->
-  </div>
+  <p>兵王王玉闪亮登场</p>
 </body>
 </html>
